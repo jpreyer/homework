@@ -19,8 +19,7 @@ cookbook_file "/etc/nginx/conf.d/proxy.conf" do
   mode "0644"
 end
 
-#include_recipe 'sysctl::default'
-include_recipe 'sysctl'
+include_recipe 'sysctl::default'
 
 sysctl_param 'net.ipv4.ip_local_port_range' do
   value '20000 64000'
